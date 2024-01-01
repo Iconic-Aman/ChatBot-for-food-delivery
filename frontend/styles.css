@@ -50,13 +50,25 @@ footer {
     width: 100%;
 }
 
-.chat-bot {
+/* .chat-bot {
     position: fixed;
-    right: 20px;
+    right: 100px;
     bottom: 20px;
-    border: none;
-    z-index: 1000; 
+    border: #ff5733;
+    z-index: 800; 
+} */
+
+.chat-bot {
+    /* max-width: 50%; */
+    width: 30%;
+    /* height: auto;  */
+    position: fixed;
+    right: 100px;
+    bottom: 20px;
+    border: #ff5733;
+    z-index: 800;
 }
+
 .container {
     margin: 0 auto;
     max-width: 1200px; /* or any other value */
