@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Delights - Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo2.png" type="image/png">
+
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="top-nav">
+                <img src="logo.png" alt="Delicious Delights Logo" class="logo">
+                
+            </div>
+            <h1>Delicious Delights</h1>
+            <p>Your go-to destination for mouth-watering meals delivered to your doorstep.</p>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Delicious Menu</h2>
+            <div class="food-items-container">
+                <div class="food-item">
+                    <img src="pizza.jpg" alt="Pizza">
+                    <h3>Pizza</h3>
+                    <p class="price">8.00</p>
+                </div>
+
+                <div class="food-item">
+                    <img src="vada-pav.jpg" alt="vada Pav">
+                    <h3>Vada Pav</h3>
+                    <p class="price">4.00</p>
+                </div>
+
+                <div class="food-item">
+                    <img src="mango-lassi.jpeg" alt="mango-lassi">
+                    <h3>Mango Lassi</h3>
+                    <p class="price">5.00</p>
+                </div>
+
+                <div class="food-item">
+                    <img src="chhole-bhature.jpeg" alt="Chhole-Bhature">
+                    <h3>Chhole Bhature</h3>
+                    <p class="price">7.00</p>
+                </div>
+
+                <div class="food-item">
+                    <img src="masala-dosa.jpg" alt="masala-dosa">
+                    <h3>Masala Dosa</h3>
+                    <p class="price">6.00</p>
+                </div>
+
+                <div class="food-item">
+                    <img src="vegetable-biryani.jpg" alt="vegetable-biryani">
+                    <h3>Vegetable Biryani</h3>
+                    <p class="price">9.00</p>
+                </div>
+
+                <div class="food-item">
+                    <img src="Pav_bhaji.jpg" alt="Pav-Bhaji">
+                    <h3>Pav Bhaji</h3>
+                    <p class="price">6.00</p>
+                </div>
+
+
+                <div class="food-item">
+                    <img src="samosa.jpeg" alt="Samosa">
+                    <h3>Samosa</h3>
+                    <p class="price">5.00</p>
+                </div>
+
+            </div>
+
+            <!-- Add more food items as needed -->
+
+        </div>
+    </section>
+
+
+    <section class="order-now">
+        <div class="container">
+            <h2>Order Now and Enjoy Delicious Meals!</h2>
+            <p>Experience the convenience of having your favorite meals delivered to your doorstep. Place your order
+                now!</p>
+            <a href="#order-form" class="btn">Order Now</a>
+        </div>
+    </section>
+
+    <section id="order-form" class="contact-form">
+        <div class="container">
+            <h2>Place Your Order</h2>
+            <form action="submit_order.php" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <label for="food-choice">Select Your Dish</label>
+                <select id="food-choice" name="food-choice" required>
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="pasta">Pasta</option>
+                    <!-- Add more options as needed -->
+
+                </select>
+
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="chatbot" class="chatbot-section">
+        <div class="container">
+            <button id="chatbot-button" class="chatbot-button">Chat with our Chatbot</button>
+            <iframe class="chat-bot" width="100%" height="400" allow="microphone;"
+                src="https://console.dialogflow.com/api-client/demo/embedded/d3f41a9c-7130-40e1-90fb-fb012aa9fb25"></iframe>
+        </div>
+    </section>
+
+
+
+    <!-- <footer>
+        <div class="container">
+            <p>&copy; 2024 Delicious Delights - Food Delivery</p>
+        </div> 
+    </footer> -->
+
+
+</body>
+
+</html>

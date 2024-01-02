@@ -1,0 +1,293 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+form,
+button,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background: black; /* Temporary background color for troubleshooting */
+    font-family: 'Arial';   
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background-image: url('header-background.jpg'); /* Add the path to your background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for transparency */
+    /* Ensure the overlay is above the background image */
+/* } */ 
+
+header h1,
+header p {
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for transparency */
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.features {
+    background-color: #fff;
+    padding: 3em 0;
+}
+
+.feature {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+}
+
+.order-now {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 3em 0;
+}
+
+.order-now h2 {
+    color: #333;
+}
+
+.order-now p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 3em 0;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo {
+    /* max-width: 100px; Adjust the max-width as needed */
+    height: 100px;
+    width: 100px;
+    left: 10px;
+    /* display: block; */
+    /* margin: 10px; */
+    
+}
+
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f8d52d;
+}
+
+
+
+.menu-section {
+    background-color: #fff;
+    padding: 3em 0;
+}
+
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.food-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.food-item {
+    text-align: center;
+    margin-bottom: 2em;
+    width: calc(33.333% - 2em);
+    box-sizing: border-box;
+}
+
+.food-item img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.food-item h3 {
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.food-item p.price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.food-item p.price::before {
+    content: "\20B9 "; /* Unicode character for Indian Rupees symbol */
+}
+
+
+.chatbot-section {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+.chatbot-button {
+    padding: 10px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.chat-bot {
+    display: none;
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.arrow-up {
+    transform: rotate(-180deg);
+}
+
+.bright-background {
+    filter: brightness(0.7); /* Adjust the brightness value as needed */
+}
+
+
