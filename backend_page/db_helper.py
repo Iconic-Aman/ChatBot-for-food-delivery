@@ -40,9 +40,6 @@ menu_items = {'lassi': 1, 'samosa': 2, 'bananas': 10.0}
 a = get_str_from_food_dict(menu_items)
 print(a)
     
-
-
-
 # menu_items = {'samosa': 2, 'lassi': 1}
 
 

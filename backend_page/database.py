@@ -4,7 +4,7 @@ cnx = mysql.connector.connect(
         host=  'localhost',
         user='root',
         password= 'mysql.Aman@123',
-        database= 'pandeyji_eatery'
+        database= 'my_food_database'
 )
 def get_order_status(order_id: int):
     #create a cursor object

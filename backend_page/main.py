@@ -2,13 +2,15 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 import re
 import database # this is another file with name database.py
-import helper #this is another module with some function
+# import backend_page
+# import backend_page.db_helper as helper #this is another module with some function
+import db_helper as helper
 app = FastAPI()
 
 @app.get("/")
 def read_root():
+    
     return {"Hello": "World"}
-
 
 # make a dictionary for a session
 inprogress_order= dict()
@@ -153,20 +155,3 @@ async def handle_request(request: Request):
     #     return TrackOrder(parameters)
 
     return intent_handler[intent](parameters, session_id)
-    
-
-
-
-    
-
-
-
-
-    
-
-
-
-
-
-  
-                            
