@@ -1,11 +1,12 @@
 import re
 import mysql.connector
-from database import cnx
+from backend_page.database import cnx
 
 text = "projects/aman-chatbot-ghka/agent/sessions/contexts/ongoing-order"
 def session_id_extracter(text):
 
 # Define the regular expression pattern using (.*?)
+    
     pattern = r"/sessions/(.*?)/contexts/"
     match = re.search(pattern, text)
     if match:

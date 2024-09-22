@@ -1,14 +1,15 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 import re
-import database # this is another file with name database.py
+from backend_page.database import * # this is another file with name database.py
 # import backend_page
 # import backend_page.db_helper as helper #this is another module with some function
-import db_helper as helper
+from backend_page import db_helper as helper
 app = FastAPI()
 
 @app.get("/")
 def read_root():
+    
     
     return {"Hello": "World"}
 
@@ -17,7 +18,7 @@ inprogress_order= dict()
 
 def TrackOrder(parameters: dict, session_id: str):
     order_id = int(parameters['number'])
-    order_status = database.get_order_status(order_id)
+    order_status = get_order_status(order_id)
 
     if order_status:
         fullfillment_text = f'The order status for order id {order_id} = {order_status}'
@@ -61,7 +62,7 @@ def completeOrder(parameters: dict, session_id: str):
         if order_id == -1:
             fullfillment_text = f"sorry! i couldn't process your order. pls place a new order"
         else: 
-            order_total = database.get_total_order_price(order_id)
+            order_total = get_total_order_price(order_id)
             fullfillment_text = f"awesome! we have placed your order"\
                                 f"Here is your order id {order_id}. " \
                                 f"your order total is {order_total} which you can pay at the time of delivery"
@@ -74,8 +75,8 @@ def completeOrder(parameters: dict, session_id: str):
 def save_to_database(order: dict):
     # order = {'pizza': 1, 'lassi': 4}
     for food_item, quantity in order.items():
-        next_order_id = database.get_next_order_id()
-        rcode = database.insert_order_in_db(
+        next_order_id = get_next_order_id()
+        rcode = insert_order_in_db(
             food_item, 
             quantity, 
             next_order_id
@@ -84,7 +85,7 @@ def save_to_database(order: dict):
         if rcode == -1:
             return -1
         
-    database.insert_order_tracking(next_order_id, 'in progress')
+    insert_order_tracking(next_order_id, 'in progress')
     return next_order_id
 
 #step to remove the order
